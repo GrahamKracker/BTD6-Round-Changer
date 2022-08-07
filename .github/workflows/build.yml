@@ -2,11 +2,11 @@ ame: Build
 
 on:
   push:
-    branches: [ "Main" ]
+    branches: [ "main" ]
     tags:
       - '*'
   pull_request:
-    branches: [ "Main" ]
+    branches: [ "main" ]
 
 env:
   PROJECT_NAME: Round Changer
