@@ -10,8 +10,8 @@ on:
 
 env:
   PROJECT_NAME: Round Changer
-  CSPROJ: "./Round Changer.csproj"
-  BLOONSTD6: ./BloonsTD6
+  CSPROJ: ".\\Round Changer.csproj"
+  BLOONSTD6: .\\BloonsTD6
   MELONLOADER_BRANCH: alpha-development
 
 jobs:
@@ -58,14 +58,14 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           repository: doombubbles/btd6-ci-dependencies
           ref: main
-          path: ${{ env.BLOONSTD6 }}/MelonLoader/Managed
+          path: ${{ env.BLOONSTD6 }}\MelonLoader\Managed
           
           
       - name: Download btd6.targets
         uses: suisei-cn/actions-download-file@v1.0.1
         with: 
           url: "https://raw.githubusercontent.com/gurrenm3/BTD-Mod-Helper/3.0_Features/BloonsTD6%20Mod%20Helper/btd6.targets"
-          target: "D:/a/BTD6-Round-Changer/"
+          target: "D:\\a\\BTD6-Round-Changer\\"
 
       - name: Setup .NET
         uses: actions/setup-dotnet@v2
