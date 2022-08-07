@@ -10,7 +10,7 @@ on:
 
 env:
   PROJECT_NAME: Round Changer
-  CSPROJ: "./BloonsTD6 Mod Helper/Round Changer.csproj"
+  CSPROJ: "./Round Changer.csproj"
   BLOONSTD6: ./BloonsTD6
   MELONLOADER_BRANCH: alpha-development
 
@@ -79,22 +79,13 @@ jobs:
           # A file, directory or wildcard pattern that describes what to upload
           path: ${{ env.BLOONSTD6 }}/Mods/${{ env.PROJECT_NAME }}.dll
       
-      
-      - name: Upload Mod Documentation
-        uses: actions/upload-artifact@v2.2.4
-        with:
-          # Artifact name
-          name: ${{ env.PROJECT_NAME }}.xml
-          # A file, directory or wildcard pattern that describes what to upload
-          path: ${{ env.BLOONSTD6 }}/Mods/${{ env.PROJECT_NAME }}.xml
-          
+  
           
       - name: Release
         uses: softprops/action-gh-release@v1
-        if: startsWith(github.ref, 'refs/tags/') && github.repository == 'doombubbles/BTD-Mod-Helper'
+        if: startsWith(github.ref, 'refs/tags/') && github.repository == 'GrahamKraker/BTD6-Round-Changer'
         with:
           files: |
             ${{ env.BLOONSTD6 }}/Mods/${{ env.PROJECT_NAME }}.dll
-            ${{ env.BLOONSTD6 }}/Mods/${{ env.PROJECT_NAME }}.xml
-          body_path: ./BloonsTD6 Mod Helper/LATEST.md
+          body_path: ./LATEST.md
           fail_on_unmatched_files: true
