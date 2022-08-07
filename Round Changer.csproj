@@ -15,5 +15,5 @@
         <Optimize>true</Optimize>
         <DebugType>none</DebugType>
     </PropertyGroup>
-    <Import Project="C:\Users\graham.GRAHAMS-PC\source\repos\btd6.targets"/>
+    <Import Project="..\btd6.targets"/>
 </Project>

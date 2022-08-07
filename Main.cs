@@ -33,6 +33,7 @@ namespace Round_Changer
         
         public static void SetRound(int round)
         {
+            
             if (round > 1)
                 InGame.instance.bridge.SetRound(round-1);
             if (round == 1)
