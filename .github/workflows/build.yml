@@ -65,7 +65,7 @@ jobs:
         uses: suisei-cn/actions-download-file@v1.0.1
         with: 
           url: "https://raw.githubusercontent.com/gurrenm3/BTD-Mod-Helper/3.0_Features/BloonsTD6%20Mod%20Helper/btd6.targets"
-
+          target: ./BloonsTD6
 
       - name: Setup .NET
         uses: actions/setup-dotnet@v2
