@@ -59,10 +59,12 @@ jobs:
           repository: doombubbles/btd6-ci-dependencies
           ref: main
           path: ${{ env.BLOONSTD6 }}/MelonLoader/Managed
-      - name: Github Action for curl
-        uses: wei/curl@v1.1.1
+          
+          
+      - name: Download btd6.targets
+        uses: suisei-cn/actions-download-file@v1.0.1
         with: 
-          args: https://raw.githubusercontent.com/gurrenm3/BTD-Mod-Helper/3.0_Features/BloonsTD6%20Mod%20Helper/btd6.targets
+          url: "https://raw.githubusercontent.com/gurrenm3/BTD-Mod-Helper/3.0_Features/BloonsTD6%20Mod%20Helper/btd6.targets"
 
 
       - name: Setup .NET
