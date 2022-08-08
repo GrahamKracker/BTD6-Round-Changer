@@ -74,7 +74,7 @@ jobs:
 
 
       - name: Build
-        run: dotnet build -c BTD6_Release "${{ env.CSPROJ }}" -p:BloonsTD6=".\BloonsTD6"
+        run: dotnet build -c BTD6_Release "${{ env.CSPROJ }}" -p:BloonsTD6="..\BloonsTD6"
 
 
       - name: Upload Mod DLL
