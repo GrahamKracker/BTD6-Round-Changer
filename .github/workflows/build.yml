@@ -7,7 +7,7 @@ on:
       - '*'
 
 env:
-  PROJECT_NAME: BTD6-Round-Changer
+  PROJECT_NAME: Round Changer
   MOD_HELPER_BRANCH: 3.0_Features
   MELONLOADER_BRANCH: alpha-development
   
