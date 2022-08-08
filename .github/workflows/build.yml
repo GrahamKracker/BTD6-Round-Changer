@@ -5,7 +5,10 @@ on:
     branches: [ "main" ]
     tags:
       - '*'
-
+  pull_request:
+    branches: [ "main" ]
+    
+    
 env:
   PROJECT_NAME: Round Changer
   MOD_HELPER_BRANCH: 3.0_Features
@@ -116,7 +119,7 @@ jobs:
           
       - name: Release
         uses: softprops/action-gh-release@v1
-        if: startsWith(github.ref, 'refs/tags/')
+        if: startsWith(github.ref, 'refs/tags/' && github.repository == 'GrahamKraker/BTD6-Round-Changer')
         with: 
           files: ${{ env.BLOONSTD6 }}/Mods/${{ env.PROJECT_NAME }}.dll
           body_path: ${{ env.PROJECT_NAME }}./LATEST.md
