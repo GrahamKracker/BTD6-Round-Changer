@@ -72,9 +72,12 @@ jobs:
         with:
           dotnet-version: 6.0.x # net6 can still build older as well
 
-
+      - name: Setup tmate session
+        uses: mxschmitt/action-tmate@v3
+        
+        
       - name: Build
-        run: dotnet build -c BTD6_Release "${{ env.CSPROJ }}" -p:BloonsTD6="..\BloonsTD6"
+        run: dotnet build -c BTD6_Release "${{ env.CSPROJ }}" -p:BloonsTD6=D:\a\BTD6-Round-Changer\"
 
 
       - name: Upload Mod DLL
